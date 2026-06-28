@@ -12,9 +12,32 @@ export default function Hero() {
     <section className="relative flex min-h-screen items-center overflow-hidden">
         {/* Background Glow */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
-                <div className="absolute left-[-120px] top-[-120px] h-80 w-80 rounded-full bg-sky-500/15 blur-[120px]" />
+                <motion.div
+                    className="absolute left-[-120px] top-[-120px] h-80 w-80 rounded-full bg-sky-500/15 blur-[120px]"
+                    animate={{
+                        scale: [1, 1.15, 1],
+                        opacity: [0.3, 0.55, 0.3],
+                    }}
+                    transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+                <motion.div
+                    className="absolute bottom-[-150px] right-[-120px] h-96 w-96 rounded-full bg-cyan-400/10 blur-[140px]"
+                    animate={{
+                        scale: [1.1, 0.95, 1.1],
+                        opacity: [0.2, 0.45, 0.2],
+                     }}
+                    transition={{
+                        duration: 10,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+                
 
-                <div className="absolute bottom-[-150px] right-[-120px] h-96 w-96 rounded-full bg-cyan-400/10 blur-[140px]" />
             </div>
         {/* Grid Background */}
             <div
@@ -51,7 +74,7 @@ export default function Hero() {
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
                 Open to Internship
             </motion.div>
-            
+
             <p className="text-lg text-sky-400">
               {portfolioData.hero.greeting}
             </p>
