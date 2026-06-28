@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { fadeLeft, fadeRight } from "../animations/fade";
-
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
@@ -27,20 +27,37 @@ export default function Hero() {
               {portfolioData.hero.name}
             </h1>
 
-            <h2 className="mt-4 text-2xl text-slate-400">
-              {portfolioData.hero.roles.join(" • ")}
-            </h2>
+            <h2 className="mt-4 text-2xl font-medium text-sky-400">
+                <TypeAnimation
+                sequence={[
+                portfolioData.hero.roles[0],
+                1100,
+                portfolioData.hero.roles[1],
+                1100,
+                portfolioData.hero.roles[2],
+                1100,
+                portfolioData.hero.roles[3],
+                1100,
+            ]}
+            wrapper="span"
+            speed={60}
+             repeat={Infinity}
+          />
+        </h2>
+
 
             <p className="mt-8 max-w-2xl leading-8 text-slate-400">
               {portfolioData.hero.description}
             </p>
 
             <div className="mt-10 flex gap-4">
-              <Button>View Projects</Button>
+                <Button>
+                    View Projects
+                </Button>
 
-              <button className="rounded-xl border border-slate-700 px-6 py-3 transition hover:bg-slate-800">
-                Download CV
-              </button>
+                <Button variant="secondary">
+                    Download CV
+                </Button>
             </div>
 
             <div className="mt-10 flex items-center gap-6 text-2xl text-slate-400">
