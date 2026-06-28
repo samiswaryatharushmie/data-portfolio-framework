@@ -5,11 +5,14 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { fadeLeft, fadeRight } from "../animations/fade";
-import { TypeAnimation } from "react-type-animation";
+import { TypeAnimation } from "react-type-animation"
+import NeuralNetwork from "../components/hero/NeuralNetwork";
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen overflow-hidden pt-20 md:pt-16">
+
+        <NeuralNetwork />
 
         {/* Background Glow */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -51,8 +54,9 @@ export default function Hero() {
                      backgroundSize: "60px 60px",
                 }}
             />
-      <Container>
-        <div className="grid min-h-[calc(100vh-64px)] items-center gap-12 md:grid-cols-2">
+    
+            <Container>
+        <div className="grid min-h-[calc(100vh-64px)] items-center gap-20 md:grid-cols-2">
 
           {/* Left Side */}
           <motion.div
@@ -150,18 +154,20 @@ export default function Hero() {
 
           {/* Right Side */}
         <motion.div
-            className="relative flex justify-center"
+            className="relative z-20 flex justify-center md:translate-x-10"
             variants={fadeRight}
             initial="hidden"
             animate="visible"
         >
+
+
 
             {/* Background Glow */}
             <div className="absolute h-[430px] w-[430px] rounded-full bg-sky-500/15 blur-[110px]" />
 
             {/* Glass Ring */}
             <motion.div
-                className="absolute h-[340px] w-[340px] md:h-[460px] md:w-[460px] rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
+                className="absolute z-20 h-[340px] w-[340px] md:h-[460px] md:w-[460px] rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
                 animate={{
                 rotate: 360,
                 }}
@@ -176,7 +182,7 @@ export default function Hero() {
             <motion.img
                 src={portfolioData.hero.profileImage}
                 alt="Profile"
-                className="relative h-72 w-72 md:h-96 md:w-96 rounded-full border-4 border-sky-400 object-cover shadow-[0_0_50px_rgba(14,165,233,0.35)]"
+                className="relative z-30 h-72 w-72 md:h-96 md:w-96 rounded-full border-4 border-sky-400 object-cover shadow-[0_0_50px_rgba(14,165,233,0.35)]"
                 animate={{
                 y: [0, -12, 0],
                 scale: [1, 1.02, 1],
@@ -212,7 +218,7 @@ export default function Hero() {
               </div>
             </motion.div>
       
-      </Container>
+        </Container>
     </section>
   );
 }
