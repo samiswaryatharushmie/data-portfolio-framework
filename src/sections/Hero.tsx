@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { fadeLeft, fadeRight } from "../animations/fade";
 
+
 export default function Hero() {
   return (
     <section className="flex min-h-screen items-center">
@@ -32,7 +33,6 @@ export default function Hero() {
 
             <p className="mt-8 max-w-2xl leading-8 text-slate-400">
               {portfolioData.hero.description}
-              FastAPI, Machine Learning and AI.
             </p>
 
             <div className="mt-10 flex gap-4">
