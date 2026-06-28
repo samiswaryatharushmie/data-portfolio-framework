@@ -6,13 +6,15 @@ import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { fadeLeft, fadeRight } from "../animations/fade";
 import { TypeAnimation } from "react-type-animation"
-import NeuralNetwork from "../components/hero/NeuralNetwork";
+import PulseRing from "../components/hero/PulseRing";
+import MouseParallax from "../components/hero/MouseParallax";
 
 export default function Hero() {
+    const position = MouseParallax();
   return (
     <section className="relative flex min-h-screen overflow-hidden pt-20 md:pt-16">
 
-        <NeuralNetwork />
+       {/* <NeuralNetwork /> */}
 
         {/* Background Glow */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -170,6 +172,8 @@ export default function Hero() {
                 className="absolute z-20 h-[340px] w-[340px] md:h-[460px] md:w-[460px] rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
                 animate={{
                 rotate: 360,
+                x: position.x,
+                y: position.y,
                 }}
                 transition={{
                 duration: 40,
@@ -178,6 +182,8 @@ export default function Hero() {
                 }}
             />
 
+            <PulseRing />
+
             {/* Profile */}
             <motion.img
                 src={portfolioData.hero.profileImage}
@@ -185,6 +191,7 @@ export default function Hero() {
                 className="relative z-30 h-72 w-72 md:h-96 md:w-96 rounded-full border-4 border-sky-400 object-cover shadow-[0_0_50px_rgba(14,165,233,0.35)]"
                 animate={{
                 y: [0, -12, 0],
+                x: position.x * 0.35,
                 scale: [1, 1.02, 1],
                 }}
                 transition={{

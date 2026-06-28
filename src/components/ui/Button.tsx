@@ -10,7 +10,7 @@ export default function Button({
   variant = "primary",
 }: ButtonProps) {
   const base =
-    "rounded-xl px-6 py-3 font-medium transition-all duration-300";
+    "rounded-xl px-6 py-3 font-medium transition-all duration-300 hover:-translate-y-1";
 
   const styles = {
     primary:
@@ -20,8 +20,26 @@ export default function Button({
   };
 
   return (
-    <button className={`${base} ${styles[variant]}`}>
-      {children}
+    <button
+      className={`${base} ${styles[variant]} group relative overflow-hidden`}
+    >
+      <span
+        className="
+          absolute inset-0
+          -translate-x-full
+          bg-gradient-to-r
+          from-transparent
+          via-white/20
+          to-transparent
+          transition-transform
+          duration-700
+          group-hover:translate-x-full
+        "
+      />
+
+      <span className="relative z-10">
+        {children}
+      </span>
     </button>
   );
 }
