@@ -36,6 +36,22 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
+            
+            <motion.div
+                className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-300 backdrop-blur-md"
+                animate={{
+                    scale: [1, 1.03, 1],
+                }}
+                transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+            >
+                <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                Open to Internship
+            </motion.div>
+            
             <p className="text-lg text-sky-400">
               {portfolioData.hero.greeting}
             </p>
