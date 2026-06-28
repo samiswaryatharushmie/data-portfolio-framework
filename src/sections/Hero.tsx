@@ -3,6 +3,7 @@ import Button from "../components/ui/Button";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { portfolioData } from "../data/portfolio";
 
 import profile from "../assets/profile.png.jpeg";
 import { fadeLeft, fadeRight } from "../animations/fade";
@@ -20,19 +21,19 @@ export default function Hero() {
             animate="visible"
           >
             <p className="text-lg text-sky-400">
-              Hello, I'm
+              {portfolioData.hero.greeting}
             </p>
 
             <h1 className="mt-4 text-6xl font-bold">
-              Your Name
+              {portfolioData.hero.name}
             </h1>
 
             <h2 className="mt-4 text-2xl text-slate-400">
-              AI Engineer • Full Stack Developer
+              {portfolioData.hero.roles.join(" • ")}
             </h2>
 
             <p className="mt-8 max-w-2xl leading-8 text-slate-400">
-              Building intelligent web applications using React,
+              {portfolioData.hero.description}
               FastAPI, Machine Learning and AI.
             </p>
 
@@ -60,7 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             >
             <motion.img
-                src={profile}
+                src={portfolioData.hero.profileImage}
                 alt="Profile"
                 className="h-96 w-96 rounded-full border-4 border-sky-500 object-cover shadow-2xl"
                 animate={{
