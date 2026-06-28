@@ -4,8 +4,6 @@ import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
-
-import profile from "../assets/profile.png.jpeg";
 import { fadeLeft, fadeRight } from "../animations/fade";
 
 export default function Hero() {
