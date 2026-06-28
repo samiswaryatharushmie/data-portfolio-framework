@@ -9,7 +9,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen overflow-hidden pt-32 md:pt-24">
+    <section className="relative flex min-h-screen overflow-hidden pt-20 md:pt-16">
 
         {/* Background Glow */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -52,7 +52,7 @@ export default function Hero() {
                 }}
             />
       <Container>
-        <div className="grid min-h-[calc(100vh-96px)] items-center gap-12 md:grid-cols-2">
+        <div className="grid min-h-[calc(100vh-64px)] items-center gap-12 md:grid-cols-2">
 
           {/* Left Side */}
           <motion.div

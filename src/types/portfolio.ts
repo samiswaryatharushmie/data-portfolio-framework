@@ -12,6 +12,7 @@ export interface HeroData {
   roles: string[];
   description: string;
   profileImage: string;
+  technologies: string[];
 }
 
 export interface PortfolioData {

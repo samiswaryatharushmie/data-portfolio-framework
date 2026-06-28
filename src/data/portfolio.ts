@@ -11,6 +11,14 @@ export const portfolioData: PortfolioData = {
       "Machine Learning Enthusiast",
       "Business Intelligence",
     ],
+    technologies: [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Power BI",
+        "React",
+        "FastAPI",
+        ],
     description:
       "Building intelligent data-driven solutions using Python, SQL, Machine Learning and Analytics.",
     profileImage: profile,
@@ -19,6 +27,6 @@ export const portfolioData: PortfolioData = {
   social: {
     github: "https://github.com/lakshithakalhara7",
     linkedin: "http://www.linkedin.com/in/lakshitha-kalhara-samarakoon-b0751a311",
-    email: "lakshithakalhara807@gmail.com",
+    email: "mailto:lakshithakalhara807@gmail.com",
   },
 };
