@@ -9,7 +9,8 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
+    <section className="relative flex min-h-screen overflow-hidden pt-32 md:pt-24">
+
         {/* Background Glow */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <motion.div
@@ -25,7 +26,7 @@ export default function Hero() {
                     }}
                 />
                 <motion.div
-                    className="absolute bottom-[-150px] right-[-120px] h-96 w-96 rounded-full bg-cyan-400/10 blur-[140px]"
+                    className="absolute bottom-[-150px] right-[-120px] h-80 w-80 md:h-96 md:w-96 w-96 rounded-full bg-cyan-400/10 blur-[140px]"
                     animate={{
                         scale: [1.1, 0.95, 1.1],
                         opacity: [0.2, 0.45, 0.2],
@@ -51,7 +52,7 @@ export default function Hero() {
                 }}
             />
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="grid min-h-[calc(100vh-96px)] items-center gap-12 md:grid-cols-2">
 
           {/* Left Side */}
           <motion.div
@@ -72,18 +73,21 @@ export default function Hero() {
                 }}
             >
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                Open to Internship
+                Open for Internship 2026
             </motion.div>
 
             <p className="text-lg text-sky-400">
               {portfolioData.hero.greeting}
             </p>
 
-            <h1 className="mt-4 text-6xl font-bold">
-              {portfolioData.hero.name}
+            <h1 className="mt-4 text-6xl font-extrabold leading-tight md:text-7xl">
+                <span className="bg-gradient-to-r from-white via-sky-200 to-cyan-400 bg-clip-text text-transparent">
+                    {portfolioData.hero.name}
+                </span>
             </h1>
 
-            <h2 className="mt-4 text-2xl font-medium text-sky-400">
+
+            <h2 className="mt-4 min-h-[40px] text-xl font-medium text-sky-400 md:text-2xl">
                 <TypeAnimation
                 sequence={[
                 portfolioData.hero.roles[0],
@@ -102,7 +106,7 @@ export default function Hero() {
         </h2>
 
 
-            <p className="mt-8 max-w-2xl leading-8 text-slate-400">
+            <p className="mt-8 max-w-xl text-lg leading-9 text-slate-400">
               {portfolioData.hero.description}
             </p>
 
@@ -145,31 +149,46 @@ export default function Hero() {
           </motion.div>
 
           {/* Right Side */}
-          <motion.div
+        <motion.div
             className="relative flex justify-center"
             variants={fadeRight}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.8 }}
-            >
-        <div className="absolute h-[430px] w-[430px] rounded-full bg-sky-500/10 blur-[90px]" />
-            
+        >
+
+            {/* Background Glow */}
+            <div className="absolute h-[430px] w-[430px] rounded-full bg-sky-500/15 blur-[110px]" />
+
+            {/* Glass Ring */}
+            <motion.div
+                className="absolute h-[340px] w-[340px] md:h-[460px] md:w-[460px] rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
+                animate={{
+                rotate: 360,
+                }}
+                transition={{
+                duration: 40,
+                repeat: Infinity,
+                ease: "linear",
+                }}
+            />
+
+            {/* Profile */}
             <motion.img
                 src={portfolioData.hero.profileImage}
                 alt="Profile"
-                className="h-96 w-96 rounded-full border-4 border-sky-500 object-cover shadow-2xl"
+                className="relative h-72 w-72 md:h-96 md:w-96 rounded-full border-4 border-sky-400 object-cover shadow-[0_0_50px_rgba(14,165,233,0.35)]"
                 animate={{
-                    y: [0, -12, 0],
+                y: [0, -12, 0],
+                scale: [1, 1.02, 1],
                 }}
                 transition={{
-                duration: 4,
+                duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
                 }}
-              />
+            />
 
-            
-          </motion.div>
+            </motion.div>
 
         </div>
         <motion.div
