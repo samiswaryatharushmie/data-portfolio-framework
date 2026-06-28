@@ -17,8 +17,8 @@ export const portfolioData: PortfolioData = {
   },
 
   social: {
-    github: "YOUR_GITHUB_LINK",
-    linkedin: "YOUR_LINKEDIN_LINK",
-    email: "example@email.com",
+    github: "https://github.com/lakshithakalhara7",
+    linkedin: "http://www.linkedin.com/in/lakshitha-kalhara-samarakoon-b0751a311",
+    email: "lakshithakalhara807@gmail.com",
   },
 };

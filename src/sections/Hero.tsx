@@ -115,12 +115,33 @@ export default function Hero() {
                     Download CV
                 </Button>
             </div>
+            <div className="mt-10 flex items-center gap-5">
+                <a
+                    
+                    target="_blank"href={portfolioData.social.github}
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-slate-700 p-3 text-slate-400 transition-all duration-300 hover:scale-110 hover:border-sky-400 hover:text-sky-400"
+                >
+                    <FaGithub size={22} />
+                </a>
 
-            <div className="mt-10 flex items-center gap-6 text-2xl text-slate-400">
-              <FaGithub className="cursor-pointer transition hover:text-white" />
-              <FaLinkedin className="cursor-pointer transition hover:text-white" />
-              <Mail className="cursor-pointer transition hover:text-white" />
+                <a
+                    href={portfolioData.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-slate-700 p-3 text-slate-400 transition-all duration-300 hover:scale-110 hover:border-sky-400 hover:text-sky-400"
+                >
+                    <FaLinkedin size={22} />
+                </a>
+
+                <a
+                    href={`mailto:${portfolioData.social.email}`}
+                    className="rounded-full border border-slate-700 p-3 text-slate-400 transition-all duration-300 hover:scale-110 hover:border-sky-400 hover:text-sky-400"
+                >
+                    <Mail size={22} />
+                </a>
             </div>
+            
           </motion.div>
 
           {/* Right Side */}
