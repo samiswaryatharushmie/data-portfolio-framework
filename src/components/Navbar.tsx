@@ -10,11 +10,47 @@ export default function Navbar() {
           </h1>
 
           <ul className="flex flex-row gap-8 list-none">
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Contact</li>
-          </ul>
+            <li className="group cursor-pointer">
+              <a
+                href="#about"
+                className="relative"
+              >
+                About
+
+                <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full" />
+              </a>
+            </li>
+              <li className="group cursor-pointer">
+                <a
+                  href="#skills"
+                  className="relative"
+                >
+                  Skills
+
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full" />
+                </a>
+              </li>            
+              <li className="group cursor-pointer">
+                <a
+                  href="#projects"
+                  className="relative"
+                >
+                  Projects
+
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full" />
+                </a>
+              </li>           
+              <li className="group cursor-pointer">
+                <a
+                  href="#contact"
+                  className="relative"
+                >
+                  Contact
+
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full" />
+                </a>
+              </li>
+            </ul>
         </nav>
       </Container>
     </header>

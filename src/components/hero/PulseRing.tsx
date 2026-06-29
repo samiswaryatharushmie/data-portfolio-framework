@@ -4,10 +4,20 @@ export default function PulseRing() {
   return (
     <>
       <motion.div
-        className="absolute h-72 w-72 md:h-96 md:w-96 rounded-full border border-sky-400/40"
+        className="
+          absolute
+          h-64 w-64
+          sm:h-72 sm:w-72
+          md:h-80 md:w-80
+          lg:h-[340px] lg:w-[340px]
+          xl:h-[380px] xl:w-[380px]
+          rounded-full
+          border
+          border-sky-400/40
+        "
         animate={{
-          scale: [1, 1.18],
-          opacity: [0.5, 0],
+          scale: [1, 1.15],
+          opacity: [0.45, 0],
         }}
         transition={{
           duration: 3,
@@ -17,10 +27,20 @@ export default function PulseRing() {
       />
 
       <motion.div
-        className="absolute h-72 w-72 md:h-96 md:w-96 rounded-full border border-cyan-300/30"
+        className="
+          absolute
+          h-64 w-64
+          sm:h-72 sm:w-72
+          md:h-80 md:w-80
+          lg:h-[340px] lg:w-[340px]
+          xl:h-[380px] xl:w-[380px]
+          rounded-full
+          border
+          border-cyan-300/30
+        "
         animate={{
-          scale: [1, 1.28],
-          opacity: [0.35, 0],
+          scale: [1, 1.25],
+          opacity: [0.3, 0],
         }}
         transition={{
           duration: 3,
